@@ -1,0 +1,217 @@
+print('Hello World')
+
+Hello World
+
+#Creation of Empty
+li=[]
+print(li)
+print(type(li)) #Implicit Type Conversion
+
+[]
+<class 'list'>
+
+li=[12,50,43,25,70,46.5]
+print(li)
+print(type(li))
+
+[12, 50, 43, 25, 70, 46.5]
+<class 'list'>
+
+li.append(25)
+print(li)
+
+[12, 50, 43, 25, 70, 46.5, 25]
+
+li.extend([90,45,23,89])
+print(li)
+
+[12, 50, 43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+
+#index value
+print(li[-2])
+print(li[1])
+print(li[-10])
+
+23
+50
+50
+
+#Replacing the list element
+li[0]=25
+print(li)
+
+[25, 50, 43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+
+#count - Repeated element
+print(len(li))
+print(li.count(25))
+
+11
+3
+
+print('Sum of list is:',sum(li))
+print('Maximum value in the list is:',max(li))
+print('Minimum value in the list is:',min(li))
+
+Sum of list is: 531.5
+Maximum value in the list is: 90
+Minimum value in the list is: 23
+
+#copy
+lis=li.copy()
+print(lis)
+li.append(76)
+print(li)
+
+[25, 50, 43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+[25, 50, 43, 25, 70, 46.5, 25, 90, 45, 23, 89, 76]
+
+#sort - It will display the result in ascending order
+li.sort()
+print(li)
+
+[23, 25, 25, 25, 43, 45, 46.5, 50, 70, 76, 89, 90]
+
+li=[12,50,43,25,70,46.5]
+print(li)
+print('^'*25)
+li.reverse()
+print(li)
+
+[12, 50, 43, 25, 70, 46.5]
+^^^^^^^^^^^^^^^^^^^^^^^^^
+[46.5, 70, 25, 43, 50, 12]
+
+#Slicing 
+print(li[-3])
+print(li[4])
+
+43
+50
+
+print(li)
+
+[46.5, 70, 25, 43, 50, 12]
+
+print(lis)
+
+[25, 50, 43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+
+#slicing[Start Value:End Value(n-1)]
+print(lis[0:5])
+print(lis[:6])
+print(lis[2:])
+
+[25, 50, 43, 25, 70]
+[25, 50, 43, 25, 70, 46.5]
+[43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+
+print(lis[:-1])
+#Slicing [Start Value:End Value(n-1):Step Value]
+print('*'*25)
+print(lis[0:6:2])
+print('*'*25)
+print(lis[::-1]) #Reverse Formula
+
+[25, 50, 43, 25, 70, 46.5, 25, 90, 45, 23]
+*************************
+[25, 43, 70]
+*************************
+[89, 23, 45, 90, 25, 46.5, 70, 25, 43, 50, 25]
+
+#How to delete the list element
+print(lis)
+print('%'*25)
+del lis[1]
+print(lis)
+
+[25, 50, 43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+%%%%%%%%%%%%%%%%%%%%%%%%%
+[25, 43, 25, 70, 46.5, 25, 90, 45, 23, 89]
+
+lis.pop() #It will remove the last element
+print(lis)
+
+[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+
+lis.pop(3)
+print(lis)
+
+[25, 43, 25, 46.5, 25, 90, 45, 23]
+
+lis=[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+print(lis)
+
+[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+
+lis.remove(25)
+print(lis)
+
+[43, 25, 70, 46.5, 25, 90, 45, 23]
+
+lis.remove(25)
+print(lis)
+
+[43, 70, 46.5, 25, 90, 45, 23]
+
+#index - particular element in which index position
+print(lis.index(46.5))
+
+2
+
+li.clear() #Remove the all element in the list
+print(li)
+
+[]
+
+#Nested List - List Inside another List
+lis=[] #Empty List
+lis.extend([45,60,86,34.5,30+2j])
+print(lis)
+
+[45, 60, 86, 34.5, (30+2j)]
+
+lis.append([20,50,45,90,45+4j])
+
+lis
+
+[45, 60, 86, 34.5, (30+2j), [20, 50, 45, 90, (45+4j)]]
+
+print(lis[5])
+print(lis[5][3])
+
+[20, 50, 45, 90, (45+4j)]
+90
+
+print(dir(list))
+
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+#clear
+lis=[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+print(lis)
+lis.clear()
+print(lis)
+
+[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+[]
+
+#insert
+lis=[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+print(lis)
+lis.insert(-3,60)
+lis.insert(3,60)
+print(lis)
+
+[25, 43, 25, 70, 46.5, 25, 90, 45, 23]
+[25, 43, 25, 60, 70, 46.5, 25, 60, 90, 45, 23]
+
+#sort example difference formula
+lis.sort(reverse=False)
+print(lis)
+lis.sort(reverse=True)
+print(lis)
+
+[23, 25, 25, 25, 43, 45, 46.5, 60, 60, 70, 90]
+[90, 70, 60, 60, 46.5, 45, 43, 25, 25, 25, 23]
+
